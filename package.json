@@ -4,16 +4,23 @@
   "description": "Rest api crud y login",
   "main": "app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "npx tsc --watch",
+    "start:dev:local": "nodemon ./dist/app.js"
   },
   "author": "Rodrigo Ramirez",
   "license": "ISC",
   "dependencies": {
+    "@typegoose/typegoose": "^12.8.0",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "mongoose": "^8.7.0",
+    "nodemon": "^3.1.7",
     "typescript": "^5.6.2"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^5.0.0"
   }
 }
