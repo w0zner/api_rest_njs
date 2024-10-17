@@ -4,5 +4,12 @@ export default {
     FAILED_LOGIN: "Usuario o contraseña incorrectos",
     STATUS_USER: "Usuario inactivo",
     ERROR_INTERNO: "Error interno del servidor",
-    ERROR: "Error"
+    ERROR: "Error inesperado",
+    ERROR_TOKEN: "No se pudo generar el token",
+    SUCCESSFUL_LOGIN: "Inicio de sesión exitoso",
+    AUTHORIZATION: "Authorization",
+    TOKEN_FAILED: "No se puede validar el token",
+    USER_NOT_FOUND: "Usuario no encontrado",
+    USER_INACTIVE: "Usuario inactivo",
+    REQUIRED_FIELD: "Campo requerido",
 }
