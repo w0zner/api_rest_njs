@@ -12,4 +12,5 @@ export default {
     USER_NOT_FOUND: "Usuario no encontrado",
     USER_INACTIVE: "Usuario inactivo",
     REQUIRED_FIELD: "Campo requerido",
+    SUCCESSFUL_REGISTER: "Registro exitoso",
 }

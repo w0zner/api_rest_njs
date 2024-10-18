@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import LoginModel from "../models/login.model";
+import Login from "../models/login.model"
 import labels from "../labels";
 import bcrypt from "bcryptjs"
 import getJWT from "../helpers/jwt";
@@ -9,7 +10,7 @@ const login = async (req: Request, res: Response) => {
         
         const {username, password} = req.body;
 
-        const user = await LoginModel.findOne({username})
+        const user = await Login.findOne({username})
 
         if(!user) {
             res.status(400).json({
