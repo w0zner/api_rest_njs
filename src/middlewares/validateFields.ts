@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { validationResult } from "express-validator"
 import labels from "../labels";
 
-const validateFieldsRequest = (req: Request, res: Response, next: NextFunction) => {
+const validateFieldsRequest = (req: Request, res: Response, next: NextFunction):any => {
     try {
         const errors = validationResult(req)
         if(!errors.isEmpty()) {

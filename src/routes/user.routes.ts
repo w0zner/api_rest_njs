@@ -1,13 +1,19 @@
 import { Router } from "express";
-import { check } from "express-validator";
-import { createUser } from "../controllers/user.controller";
-import labels from "../labels";
+import { createUser, getUsers } from "../controllers/user.controller";
+import validateJWT from "../middlewares/validateJWT";
+import { validateFieldsRequest } from "../middlewares/validateFields";
 
 const router = Router()
 
+router.get('/', 
+//validateJWT,
+getUsers)
+
 router.post("/create", 
-check('username', labels.REQUIRED_FIELD).not().isEmpty(),
-check('password', labels.REQUIRED_FIELD).not().isEmpty(),
-check('role', labels.REQUIRED_FIELD).not().isEmpty(),
-check('status', labels.REQUIRED_FIELD).not().isEmpty(),
+[
+    validateJWT,
+    validateFieldsRequest
+],
 createUser)
+
+export default router

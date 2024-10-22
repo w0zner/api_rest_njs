@@ -3,7 +3,7 @@ import labels from "../labels";
 import jwt from 'jsonwebtoken'
 import LoginModel from "../models/login.model";
 
-const validateJWT = async (req: Request, res: Response, next: NextFunction) => {
+const validateJWT = async (req: Request, res: Response, next: NextFunction):Promise<any> => {
     try {
         const token =   req.header(labels.AUTHORIZATION)?.split(' ')[1]       
 
