@@ -36,7 +36,7 @@ const login = async (req: Request, res: Response):Promise<any> => {
                 })
             }
     
-            const token = await getJWT(String(user._id))
+            const token = await getJWT(String(user._id), user._role)
     
             res.status(200).json({
                 msg: labels.SUCCESSFUL_LOGIN,

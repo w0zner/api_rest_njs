@@ -8,10 +8,10 @@ class Product {
     @prop({required: true, trim: true, type:()=>String})
     private description: string
 
-    @prop({required: true, trim: true, type:()=>Number, min: 1})
+    @prop({required: true, type:()=>Number, min: 1})
     private price: number
 
-    @prop({required: true, trim: true, type:()=>Number, min: 1})
+    @prop({required: true, type:()=>Number, min: 1})
     private quantity: number
 
     @prop({required: true, type:()=>String})

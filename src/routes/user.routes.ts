@@ -6,12 +6,13 @@ import { validateFieldsRequest } from "../middlewares/validateFields";
 const router = Router()
 
 router.get('/', 
-//validateJWT,
+validateJWT(),
 getUsers)
 
-router.post("/create", 
+router.post(
+"/create", 
 [
-    validateJWT,
+    validateJWT(),
     validateFieldsRequest
 ],
 createUser)

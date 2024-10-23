@@ -5,11 +5,13 @@ import labels from "../labels";
 
 const router = Router()
 
-router.post('/login', 
-[check('username', labels.REQUIRED_FIELD).not().isEmpty(),
+router.post('/', 
+[
+check('username', labels.REQUIRED_FIELD).not().isEmpty(),
 check('password', labels.REQUIRED_FIELD).not().isEmpty(),
 check('role', labels.REQUIRED_FIELD).not().isEmpty(),
-check('status', labels.REQUIRED_FIELD).not().isEmpty()],
+check('status', labels.REQUIRED_FIELD).not().isEmpty()
+],
 login)
 
 

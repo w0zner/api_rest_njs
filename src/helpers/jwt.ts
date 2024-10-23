@@ -1,10 +1,10 @@
 import { sign } from 'jsonwebtoken'
 import labels from '../labels'
 
-const getJWT = (uid: string) => {
+const getJWT = (uid: string, role: string) => {
     try {
         return new Promise((resolve, reject) => {
-            const payload = { uid }
+            const payload = { uid, role }
             sign(
                 payload, 
                 process.env.SECRET_KEY || '', 

@@ -3,6 +3,7 @@ import labels from "../labels"
 import db_connection from "../database/config"
 import loginRoutes from "../routes/login.routes"
 import userRouter from "../routes/user.routes"
+import productRoutes from "../routes/product.routes"
 import cors from "cors"
 
 class Server {
@@ -12,6 +13,7 @@ class Server {
     //paths
     private login_paths: string
     private user_paths: string
+    private product_paths: string
 
     constructor() {
         this.app = express()
@@ -19,6 +21,7 @@ class Server {
 
         this.login_paths = "/api/login"
         this.user_paths = "/api/users"
+        this.product_paths = "/api/products"
 
         this.connectDB()
         this.middlewares()
@@ -36,6 +39,7 @@ class Server {
     routes() {
         this.app.use(this.login_paths, loginRoutes)
         this.app.use(this.user_paths, userRouter)
+        this.app.use(this.product_paths, productRoutes)
     }
 
     middlewares() {
