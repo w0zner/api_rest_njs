@@ -82,7 +82,7 @@ export const updateProduct = async (req: Request, res: Response) => {
 
         const product = await Product.findByIdAndUpdate(id, campos)
 
-        res.status(205).json({
+        res.status(206).json({
             msg: "Registro actualizado exitosamente",
             product
         })

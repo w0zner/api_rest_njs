@@ -43,8 +43,8 @@ class Server {
     }
 
     middlewares() {
-        //TODO: CORS
-        this.app.use(cors())
+        const allowedOrigins = process.env.ALLOWED_CORS || ''
+        this.app.use(cors({origin: allowedOrigins}))
         this.app.use(express.json())
     }
 
