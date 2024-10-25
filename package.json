@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "npx tsc --watch",
+    "pre-deploy": "/opt/render/project/src/ ls -a ",
     "start:dev:local": "nodemon ./dist/app.js",
     "start:prod": "node ./dist/app.js"
   },
