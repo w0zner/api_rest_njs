@@ -20,9 +20,9 @@ API REST creada con Node.js para manejar operaciones básicas en una aplicación
     ```bash
     npm install
     ```
-## Environment Variables
+## Variables de entorno
 
-To run this project, you will need to add the following environment variables to your .env file
+Para correr este proyecto, necesitas agregar las siguientes variables de entorno en un archivo .env en la raiz del proyecto
 
 `PORT` - [Puerto en el que va correr la apliación]
 
