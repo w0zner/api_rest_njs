@@ -5,7 +5,7 @@ node_modules/
 *.log
 
 # Ignorar dist (directorios de compilación)
-dist/
+# dist/
 
 # Ignorar los archivos de entorno
 .env
